@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dmitrij Titarenko</title>
+    <link rel="stylesheet" href="styles copy.css">
+    <link rel="stylesheet" href="cursor.css">
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@v0.170.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@v0.170.0/examples/jsm/",
+          "three/addons/postprocessing/EffectComposer.js": "https://cdn.jsdelivr.net/npm/three@v0.170.0/examples/jsm/postprocessing/EffectComposer.js",
+          "three/addons/postprocessing/RenderPass.js": "https://cdn.jsdelivr.net/npm/three@v0.170.0/examples/jsm/postprocessing/RenderPass.js",
+          "three/addons/postprocessing/ShaderPass.js": "https://cdn.jsdelivr.net/npm/three@v0.170.0/examples/jsm/postprocessing/ShaderPass.js",
+          "three/addons/shaders/FXAAShader.js": "https://cdn.jsdelivr.net/npm/three@v0.170.0/examples/jsm/shaders/FXAAShader.js",
+          "three/addons/postprocessing/SSAARenderPass.js": "https://cdn.jsdelivr.net/npm/three@v0.170.0/examples/jsm/postprocessing/SSAARenderPass.js",
+          "three/addons/postprocessing/TAARenderPass.js": "https://cdn.jsdelivr.net/npm/three@v0.170.0/examples/jsm/postprocessing/TAARenderPass.js"
+        }
+      }
+  </script>
+</head>
+<body>
+    
+    <div class="section full-screen-video">
+        <video autoplay loop muted playsinline class="background-video">
+            <source src="light_gradient.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div id="webgl-overlay"></div>
+        <div class="noise-overlay"></div>
+        <div class="title">
+          <h1 class="header">Dmitrij Titarenko</h1>
+          <div class="glass glass-1"></div>
+          <div class="glass glass-2"></div>
+        </div>
+    </div>
+    <script src="loader.js"></script>
+    <script type="module" src="hero-banner.js"></script>
+    <script src="cursor.js"></script>
+</body>
+</html>

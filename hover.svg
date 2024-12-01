@@ -1,0 +1,21 @@
+<svg width="800" height="150" viewBox="0 0 800 150" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Pattern for Path 1 -->
+    <pattern id="image1" patternUnits="userSpaceOnUse" width="800" height="150">
+      <image href="gradient.png" x="0" y="0" width="800" height="150" />
+    </pattern>
+    <!-- Pattern for Path 2 -->
+    <pattern id="image2" patternUnits="userSpaceOnUse" width="800" height="150">
+      <image href="gradient.png" x="0" y="-50" width="800" height="150" />
+    </pattern>
+    <!-- Pattern for Path 3 -->
+    <pattern id="image3" patternUnits="userSpaceOnUse" width="800" height="150">
+      <image href="gradient.png" x="0" y="-100" width="800" height="150" />
+    </pattern>
+  </defs>
+
+  <!-- Paths with patterns -->
+  <path class="blurred" d="M0 50H600V100H0V50Z" fill="url(#image1)" />
+  <path class="blurred" d="M225 100H600V150H225V100Z" fill="url(#image2)" />
+  <path class="blurred" d="M0 0H375V50H0V0Z" fill="url(#image3)" />
+</svg>

@@ -1,0 +1,29 @@
+/* cursor.css */
+
+/* Hide the default cursor */
+body {
+    cursor: none;
+    overflow: hidden;
+  }
+  
+  /* Custom cursor circle */
+  .cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 15px; /* Adjust size as needed */
+    height: 15px;
+    border-radius: 50%;
+    pointer-events: none;
+    mix-blend-mode: difference; /* Inverts colors where the circle is */
+    background-color: white;
+    transform: translate(-50%, -50%);
+    z-index: 1000; /* Ensure it's above all other elements */
+    transition: background-color 0.2s ease, transform 0.1s ease;
+  }
+  
+  /* Optional hover effect */
+  a:hover ~ .cursor, 
+  button:hover ~ .cursor {
+    background-color: black; /* Change cursor appearance on hover */
+  }

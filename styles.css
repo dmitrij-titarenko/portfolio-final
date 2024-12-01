@@ -1,0 +1,344 @@
+/* Reset and global styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: auto;
+}
+
+body, html {
+  font-family: Arial, sans-serif;
+  min-height: 100%;
+  overflow: auto;
+  scroll-behavior: smooth;
+}
+
+/* Loader styles */
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  z-index: 900;
+  overflow: hidden; 
+}
+
+.loader-content {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  font-size: 6vw;
+  width: 100%;
+  padding-left: 1vw;
+  z-index: 901;
+  color: #fff;
+}
+
+.secondary-bg, .third-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.secondary-bg {
+  background: black;
+  z-index: 899;
+}
+
+.third-bg {
+  background: grey;
+  z-index: 898;
+}
+
+.loader-exit {
+  animation: waveUp 2.2s cubic-bezier(0.7, 0, 0.3, 1) forwards;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out; /* Smooth fade-out effect */
+}
+
+/* Video section */
+.section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.full-screen-video {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  padding: 3vh 1vw;
+}
+
+#shader-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#webgl-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /*pointer-events: none;*/
+  z-index: -1; /* Ensures the shader stays in the background */
+}
+
+.background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.noise-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /*pointer-events: none;*/
+  mix-blend-mode: overlay;
+  z-index: 2;
+}
+
+.title {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  z-index: 100;
+}
+
+.header {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+  color: #fafafa;
+  font-size: 8vw;
+  width: fit-content;
+  height: fit-content;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.subheader {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 100;
+  color: #999999;
+  font-size: 1.2vw;
+  width: fit-content;
+  height: fit-content;
+  text-align: center;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
+
+  gap: 30px;
+
+  list-style-type: none;
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 100;
+  color: #bababa;
+  font-size: 1vw;
+  text-align: center;
+
+  z-index: 3;
+}
+
+.my-work {
+  width: 100%;
+  height: fit-content;
+  background-color: #000;
+}
+
+.subsection {
+  width: 100%;
+  height: 100vh;
+}
+
+/* Main container for picker */
+.color-picker-container {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  z-index: 200;
+}
+
+/* Color picker button */
+.color-picker {
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+
+.selected-color {
+  border-radius: 100px;
+  background-color: rgba(0, 0, 0, 1);
+  width: 30px;
+  height: 30px;
+}
+
+.color-picker-container {
+  position: fixed;
+  bottom: 5%;
+  right: 2%;
+  display: flex;
+  flex-direction: row; /* Set row direction */
+  align-items: center; /* Align vertically in the center */
+  gap: 10px;
+}
+
+.color-picker {
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+
+.selected-color {
+  border-radius: 100px;
+  background-color: rgba(0, 0, 0, 1);
+  width: 35px;
+  height: 35px;
+}
+
+.color-name {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 100;
+  color: #999999;
+  font-size: 1vw;
+  margin: 0;
+  display: flex;
+  align-items: center; /* Vertically align with the circle */
+}
+
+.color-menu {
+  position: absolute;
+  bottom: 80px;
+  right: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Align to the right */
+  border-radius: 10px;
+  padding: 10px;
+  gap: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.color-menu.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  color: white;
+  font-size: 1vw;
+  align-items: center;
+}
+
+.menu-item span:first-child {
+  margin-left: auto; /* Push color name to the right */
+  font-weight: 200;
+  color: #bababa;
+}
+
+.icon {
+  margin-left: 10px;
+}
+
+.dot-separator {
+  height: 2px;
+  width: 2px;
+  margin-top: 5px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+/* Initial hidden state for menu elements */
+.color-menu > * {
+  opacity: 0;
+  transition: opacity 0.1s ease, transform 0.1s ease;
+}
+
+/* Fade-in animation */
+.color-menu > *.fade-in {
+  opacity: 1;
+  transform: translateY(0); /* Reset to original position */
+}
+
+/* Hover effect for color names */
+.menu-item span:first-child:hover {
+  font-weight: 400;
+  color: white;
+}
+
+/* Selected color styles */
+.menu-item.selected span:first-child {
+  font-weight: 400;
+  color: white; /* Highlight the selected color */
+}
+
+.menu-item.selected .icon {
+  display: inline; /* Show the < icon only for the selected color */
+}
+

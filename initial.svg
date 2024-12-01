@@ -1,0 +1,53 @@
+<svg width="741" height="120" viewBox="0 0 741 120" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<path d="M0 0H632V10H0V0Z" fill="url(#pattern0_131_1141)"/>
+<path d="M0 10H632V20H0V10Z" fill="url(#pattern1_131_1141)"/>
+<path d="M0 20H632V30H0V20Z" fill="url(#pattern2_131_1141)"/>
+<path d="M0 30H632V40H0V30Z" fill="url(#pattern3_131_1141)"/>
+<path d="M117 40H741V50H117V40Z" fill="url(#pattern4_131_1141)"/>
+<path d="M117 50H741V60H117V50Z" fill="url(#pattern5_131_1141)"/>
+<path d="M117 60H741V70H117V60Z" fill="url(#pattern6_131_1141)"/>
+<path d="M117 70H741V80H117V70Z" fill="url(#pattern7_131_1141)"/>
+<path d="M44 80H665V90H44V80Z" fill="url(#pattern8_131_1141)"/>
+<path d="M44 90H665V100H44V90Z" fill="url(#pattern9_131_1141)"/>
+<path d="M44 100H665V110H44V100Z" fill="url(#pattern10_131_1141)"/>
+<path d="M44 110H665V120H44V110Z" fill="url(#pattern11_131_1141)"/>
+<defs>
+<pattern id="pattern0_131_1141" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_131_1141" transform="matrix(0.000420807 0 0 0.0125821 -0.0674119 -12.5781)"/>
+</pattern>
+<pattern id="pattern1_131_1141" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_131_1141" transform="matrix(0.000420807 0 0 0.0125821 -0.0674119 -12.5781)"/>
+</pattern>
+<pattern id="pattern2_131_1141" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_131_1141" transform="matrix(0.00042194 0 0 0.012616 -0.0422419 -13.4818)"/>
+</pattern>
+<pattern id="pattern3_131_1141" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_131_1141" transform="matrix(0.00042194 0 0 0.012616 -0.0422419 -13.4818)"/>
+</pattern>
+<pattern id="pattern4_131_1141" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_131_1141" transform="matrix(0.000430553 0 0 0.0125581 -0.206159 -14.5042)"/>
+</pattern>
+<pattern id="pattern5_131_1141" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_131_1141" transform="matrix(0.000430553 0 0 0.0125581 -0.206159 -14.5042)"/>
+</pattern>
+<pattern id="pattern6_131_1141" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_131_1141" transform="matrix(0.000428186 0 0 0.0125415 -0.18599 -15.4841)"/>
+</pattern>
+<pattern id="pattern7_131_1141" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_131_1141" transform="matrix(0.000428186 0 0 0.0125415 -0.18599 -15.4841)"/>
+</pattern>
+<pattern id="pattern8_131_1141" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_131_1141" transform="matrix(0.000407241 0 0 0.0121765 -0.0202484 -16.02)"/>
+</pattern>
+<pattern id="pattern9_131_1141" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_131_1141" transform="matrix(0.000407241 0 0 0.0121765 -0.0202484 -16.02)"/>
+</pattern>
+<pattern id="pattern10_131_1141" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_131_1141" transform="matrix(0.000340472 0 0 0.00202455 0.0550938 -1.97343)"/>
+</pattern>
+<pattern id="pattern11_131_1141" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_131_1141" transform="matrix(0.000340472 0 0 0.00202455 0.0550938 -1.97343)"/>
+</pattern>
+<image id="image0_131_1141" width="3014" height="1476" href="gradient.svg"/>
+</defs>
+</svg>

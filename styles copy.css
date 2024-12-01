@@ -1,0 +1,217 @@
+/* Reset and global styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: Arial, sans-serif;
+  min-height: 100%;
+  overflow: auto;
+  scroll-behavior: smooth;
+}
+
+/* Loader styles */
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #B0EC70;
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9000;
+}
+
+.loader-content {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 10px;
+  font-family: 'Cormorant Unicase', serif;
+  font-size: 3vw;
+}
+
+.loader-counter {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1vw;
+  color: #000000;
+}
+
+.loader-exit {
+  animation: slideUpSmooth 2.2s ease-in-out forwards;
+}
+
+.secondary-bg,
+.third-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+}
+
+.secondary-bg {
+  background: #D0F4A9;
+  animation: slideUpSmooth 2.1s ease-in-out forwards;
+  animation-delay: 3s;
+}
+
+.third-bg {
+  background: #F0FBE4;
+  animation: slideUpSmooth 2s ease-in-out forwards;
+  animation-delay: 2.7s;
+}
+
+/* Keyframe animations */
+@keyframes slideUpSmooth {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+/* Video section */
+.section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.full-screen-video {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100vh;
+  padding: 1vh 3vh 1vh 3vh;
+  z-index: 1;
+}
+
+.background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* WebGL overlay */
+#webgl-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.noise-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+  z-index: 2;
+}
+
+.title {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.header {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #6D2736;
+  font-size: 8vw;
+  width: fit-content;
+  height: fit-content;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.glass {
+  height: 475px;
+  width: 200px;
+  background: 
+    linear-gradient(90deg, #dedede10, #ffffff50);
+  background-blend-mode: overlay, normal; /* Apply blend mode to noise only */
+  opacity: 1; /* Keep overall opacity intact */
+  backdrop-filter: saturate(2) brightness(1) blur(8px);
+  border-radius: 100px;
+  box-shadow: 
+    inset -0 20px 40px 0 rgba(255, 255, 255, 0.7);
+  position: relative;
+  z-index: 1;
+  overflow: hidden; /* Ensure content is clipped */
+  position: absolute;
+  left: 50%;
+}
+
+.glass::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('noise.webp') repeat; /* Noise background */
+  mix-blend-mode: overlay; /* Blend mode for noise */
+  opacity: 0.05; /* Control opacity of noise */
+  z-index: -1; /* Keep it behind content */
+  border-radius: 100px; /* Match the parent element's border-radius */
+  pointer-events: none; /* Ensure it doesn’t interfere with interactions */
+}
+
+.glass::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 100px; /* Match the parent border radius */
+  box-shadow: 
+    inset -0 4px 4px 0 rgba(0, 0, 0, 0.2),
+    inset -0 16px 8px 0 rgba(255, 255, 255, 0.4),
+    inset -0 1px 8px 0 rgba(255, 255, 255, 0.4); /* Black inner shadow */
+  mix-blend-mode: overlay; /* Blending mode for the black shadow */
+  pointer-events: none; /* Ensure it doesn't interfere with interactions */
+  z-index: -1; /* Keep it behind the content */
+}
+
+.glass-1 {
+  top: 40%;
+  left: 20%;
+}
+
+.glass-2 {
+  top: 30%;
+  left: 70%;
+}
